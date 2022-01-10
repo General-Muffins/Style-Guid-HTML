@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<!--
+
+	Components Page
+	Project 3  
+	Authors: Yueqing Wang & Sara Hoelzlhammer
+	
+	Work was split evenly between both group members. 
+	Communication took place via email threads and skype meetup. 
+
+-->
+
+<html>
+    <head>
+    <title>Style Guide 101</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+
+        <!-- Navbar -->
+        <ul class="w3-navbar w3-top w3-left-align" style="z-index:4;"> <!--Primary Color Used-->
+            <li class="w3-opennav w3-right w3-hide-large">
+                <a class="w3-large" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            </li>
+            <div class="navLink">
+				<li><a href="#">People Helping People</a></li> <!-- Hover Color = Secondary: First Accent Color = Border-->
+				<li class="w3-hide-small"><a href="PeopleHpeople.html">Style guide</a></li>
+				<li id="current" class="w3-hide-small"><a href="components.html">UI Components</a></li>
+			</div>
+        </ul>
+
+		<!-- Sidenav -->
+		<nav id="sideBar" class="w3-sidenav w3-collapse w3-animate-left" style="z-index:3;width:250px;margin-top:51px;">
+			<a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hide-large w3-hover-black" title="close menu">
+				<i class="fa fa-remove"></i>
+			</a>
+			<h4 id="sideNavTitle"><b>Table of contents</b></h4> <!--Background color = Primary, Title for Side Bar = Accent-->
+			<div class="navLink">
+				<a href="#buttons">Buttons</a>  <!-- Hover = Accent color with Border/Text = Secondary on Hover-->
+				<a href="#images">Images</a>
+				<a href="#menu">Navigation</a>
+				<a href="#states">Visual States</a>
+				<a href="#form">Form</a> 
+				<a href="#filters">Filters</a>
+				<a href="#resultModels">Box Models</a>
+			</div>
+		</nav>
+
+        <!-- Overlay effect when opening sidenav on small screens -->
+        <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"></div>
+
+        <!-- Main content: shift it to the right by 250 pixels when the sidenav is visible -->
+        <div class="w3-main" style="margin-left:250px">
+
+            <div class="w3-row w3-padding-hor-64" id="buttons">
+                <div class="w3-twothird w3-container" style="margin-top: 50px">
+                    <h1>Buttons</h1> <!--Color = Darkest Green Accent-->
+                    <p></p>
+                </div>
+                <div class="w3-third w3-padding w3-margin">
+				<pre class="w3-padding-large w3-container w3-border w3-padding w3-margin">
+&#x3C;button&#x3E;
+This is a button
+&#x3C;/button&#x3E;
+                </pre>
+				
+				<p>All buttons have the same static style except for arrow buttons resereved for integer 
+				inputs. Examples are below:</p>
+                    														
+					<p>Buttons such as ones to sumbit or search are rounded with border-radius, when hovered
+					over to click cursor appears to help the user identify that the element is able to be clicked, 
+					and being hovered over shows border with shadow.</p><br>
+					
+					<div class="main-buttonStyle">
+						<button >
+						 Sumbit
+						</button>
+						<button>
+						 Search
+						</button>
+					</div>
+					
+					<p>Other buttons that also may be styled like above include items in the search
+					results, such as on a volunteer oportunity job or inbox. Examples are given below.</p>
+					
+					<div class="main-buttonStyle">
+						<button>
+						 Learn More
+						</button><br><br>
+						<button>
+						 Want To Help? 
+						</button>
+						<button>
+						 Inbox 
+						</button>
+					</div>
+					
+					<p>Buttons such as ones to change amounts in the filters like distance are decorated with 
+					arrows to show incline or descent. They are also outlined as well to help make them noticible to
+					the user.</p>
+					
+					<div class="btnUpDown">
+						<button class="hideMileBT1"><img src="images/up.png" alt="slideUp" weight="20" height="20"></button>
+						<button class="hideMileBT2"><img src="images/down.png" alt="slideUp" weight="20" height="20"></button>
+					</div>
+                </div>
+
+            </div>
+
+            <div class="w3-row" id="images">
+                <div class="w3-twothird w3-container">
+                    <h1>Images</h1> <!--Color = Darkest Green Accent-->
+                    <p>This image logo will be placed on the upperleft top navbar , the height is 150px, 
+					the width is 175px<br><br>
+					
+					<img id="logo" src="images/php.png" alt="logo"></p>
+					
+					<p>Profile images are styled like the code below, this is the guideline for size and look. 
+					An example of how this code appears is below it.</p>
+					<img id="profileImage" src="images/profile.png" alt="profileImage"><br>
+					<p>Padding is 5px, width is 150px, a border radius of 4px, and a border of 1px, solid, and color #285943</p>
+                </div>
+            </div>
+			
+			<div class="w3-row">
+				<div class="w3-twothird w3-container" id="menu">
+					<h1>Navigation Menu</h1> <!--Color = Darkest Green Accent-->
+					<p>Menu navigation will be a horizontal bar located at the top of the page. It will be left aligned,
+					and include the home button, login, as well as a dropdown for Volunteer info such as becoming a 
+					volunteer, posting events to volunter, looking for an organization, or checking your events. To the 
+					right will be the search box, along witht the search button to execute the search a user is looking 
+					for. An example is located below.</p>
+					<div class="topnav">
+						<a class="active" href="#home">Home</a>
+						<a href="#about">Login</a>
+						<li id="menuLink" class="dropdown">
+							<a class="dropbtn">Volunteer Info</a>
+								<div class="dropdown-content">
+									<a>Be a Volunteer</a>
+									<a>Volunteering Organization</a>
+									<a>Post Your Event</a>
+									<a>Your Events</a>
+								</div>
+						</li> 
+						<div class="search-container">
+							<form>
+								<input type="text" placeholder="Search.." name="search">
+								<button>Search</button>
+							</form>
+						</div>
+					</div>	
+					<pre class="w3-padding-large w3-container w3-border w3-padding w3-margin">
+					
+					
+&lt;form&gt;
+ &lt;div class="topnav"&gt;
+  &lt;a class="active" href="#home"&gt;Home&lt;/a&gt; 
+  &lt;a href="#about"&gt;Login&lt;/a&gt;
+
+  &lt;li id="menuLink" class="dropdown"&gt;
+   &lt;a class="dropbtn"&gt;Volunteer Info&lt;/a&gt;
+   &lt;div class="dropdown-content"&gt;
+    &lt;a>Be a Volunteer&lt;/a&gt;
+    &lt;a&gt;Volunteering Organization&lt;/a&gt;
+    &lt;a&gt;Post Your Event&lt;/a&gt;
+    &lt;a&gt;Your Events&lt;/a&gt;
+   &lt;/div&gt;
+  &lt;/li&gt;
+
+  &lt;div class="search-container"&gt;
+   &lt;form&gt;
+    &lt;input type="text" placeholder="Search.."
+	          name="search"&gt;
+    &lt;button>Search&lt;/button&gt;
+   &lt;/form&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;	
+&lt;/form&gt;
+											</pre>				
+				</div>
+            </div><br>
+			
+			<div class="w3-row w3-padding-hor-64">
+                <div class="w3-twothird w3-container" id="states">
+                    <h1>States</h1> <!--Color = Darkest Green Accent-->
+					<p>Other states of text are shown below these include active and hover.
+					Active states will be used to show currently location inside the main navigation
+					bar. Hover states are used to show the user which section they are going to click
+					in both the main navigation and sub navigation are.</p>
+					<p>How active appears to user:</p>
+						<p id="currentExample">CURRENTLY ACTIVE IN NAVBAR</p>
+					<p>How hover appears to user:</p>
+						<p id="hoverExample">COLOR WHEN HOVERED IN NAVBAR</p>
+						<h6>Test below by hover over.</h6>
+						<p id="hoverNav">ITEMS IN TOP NAVBAR WHEN HOVERED OVER</p>
+					
+                </div>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-twothird w3-container" id="form">
+                    <h1>Form</h1> <!--Color = Darkest Green Accent-->
+					<p>Example image and code below for login and signup forms. For signup forms, a password security
+					bar should be coded in to show the user the how secure the password is in the feild input.</p>
+					
+					<div class="formSigninEx">
+						<form action="profile.html">
+						<div class="signIn">
+						<h2>Sign in</h2>
+						<hr>
+
+						<p><b>Username/Email</b></p>
+						<label for="email"></label>
+						<input type="text" placeholder="Enter Your Username or Email" name="email" required></input><br>
+
+						<p><b>Password</b></p>
+						<label for="psw"></label>
+						<input type="password" placeholder="Enter Password" name="psw" required></input><br>
+
+						<div>
+						<button type="submit">
+						Login
+						</button>
+						<a href="#" class="links">Forgot Password?</a>
+						</div>
+
+						</div>	
+						</form>
+					</div>
+					<pre class="w3-padding-large w3-container w3-border w3-padding w3-margin">
+					
+					
+&lt;form action="profile.html"&gt;
+ &lt;div class="signIn"&gt;
+  &lt;h2&gt;Sign in&lt;/h2&gt;
+  &lt;hr&gt;
+  
+  &lt;p&gt;&lt;b&gt;Username/Email&lt;/b&gt;&lt;/p&gt;
+	&lt;label for="email"&gt;&lt;/label&gt;
+	&lt;input type="text" placeholder="Enter 
+	Your Username or Email" name="email" 
+	required&gt;&lt;/input&gt;&lt;br&gt;
+	
+  &lt;p&gt;&lt;b&gt;Password&lt;/b&gt;&lt;/p&gt;
+   &lt;label for="psw"&gt;&lt;/label&gt;
+   &lt;input type="password" placeholder="Enter 
+   Password" name="psw" required&gt;&lt;/input&gt;&lt;br&gt;
+   
+  &lt;div&gt;
+   &lt;button type="submit" class="main-buttonStyle"&gt;
+   Login
+   &lt;/button&gt;
+   &lt;a href="#"&gt;Forgot Password?&lt;/a&gt;
+  &lt;/div&gt;
+   
+ &lt;/div&gt;	
+&lt;/form&gt;
+					</pre>	
+					
+					<div class="formSignupEx">
+						<form action="profile.html">
+						<div class="createAccount">
+						<h2>Create Account</h2>
+						<hr>
+
+						<label for="guest">Enter Your First Name</label>
+						<input type="text" placeholder="First Name" name="name"><br>
+						<label for="guest">Enter Your Last Name</label>
+						<input type="text" placeholder="Last Name" name="name"><br>
+
+						<label for="email">Username/Email</label>
+						<input type="text" placeholder="Enter Your Email" name="email" required><br>
+
+						<section>
+						<label for="password">Enter Password</label>
+						<input type="password" name="password" class="password" required></input><br>
+						<label for="password">Repeat Password</label>
+						<input type="password" name="password" class="password" required></input><br>
+
+						<meter max="8" id="password-strength-meter"></meter>
+						</section>
+
+						<p id="password-strength-meter"></p>
+						</div>
+
+						<div class="clearfix">
+						<button type="submit" class="links">Submit</button> 
+						</div>	
+						</form>
+					</div>
+					<pre class="w3-padding-large w3-container w3-border w3-padding w3-margin">
+					
+					
+&lt;form action="profile.html"&gt;
+ &lt;div class="createAccount"&gt;
+  &lt;h2&gt;Create Account&lt;/h2&gt;
+  &lt;hr&gt;
+  
+  &lt;label for="guest"&gt;Enter Your First Name&lt;/label&gt;
+  &lt;input type="text" placeholder="First Name" name="name"&gt;&lt;br&gt;
+  &lt;label for="guest"&gt;Enter Your Last Name&lt;/label&gt;
+  &lt;input type="text" placeholder="Last Name" name="name"&gt;&lt;br&gt;
+	
+  &lt;label for="email"&gt;Username/Email&lt;/label&gt;
+  &lt;input type="text" placeholder="Enter Your Email" name="email" required&gt;&lt;br&gt;
+  
+  &lt;section&gt;
+   &lt;label for="password"&gt;Enter Password&lt;/label&gt;
+   &lt;input type="password" name="password" class="password" required&gt;&lt;/input&gt;&lt;br&gt;
+   &lt;label for="password"&gt;Repeat Password&lt;/label&gt;
+   &lt;input type="password" name="password" class="password" required&gt;&lt;/input&gt;&lt;br&gt;
+   
+   &lt;meter max="8" id="password-strength-meter"&gt;&lt;/meter&gt;
+  &lt;/section&gt;
+  
+  &lt;p id="password-strength-meter"&gt;&lt;/p&gt;
+  &lt;/div&gt;
+   
+ &lt;div class="clearfix"&gt;
+  &lt;button type="submit" class="main-buttonStyle"&gt;&lt;/button&gt; 
+ &lt;/div&gt;	
+&lt;/form&gt;
+					</pre>
+					                 
+                </div>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-twothird w3-container" id="filters">
+                    <h1>Filters</h1> <!--Color = Darkest Green Accent-->
+                    <p>The filter option will help user to narrow down the search radius for volunteer
+					opportunities near them. The filter options are encased in a box and use checkmark
+					inputs styled with the color palette of the site to stick with the theme. Example code 
+					of how the the style works is found below along with an example.<br><br>
+					
+					A fliter box will use the color #FFFFFF for it's background, have a width of 300px, a border that 
+					contains a solid style, 15px width, and the color #70b77e, padding of the box will be 50, and a margin
+					or 20px. An example of how it looks is below. 
+					
+					<form class="filter-box">
+						<h4>Distance</h4>
+							<label class="container">10 miles
+								<input type="checkbox" checked="checked">
+								<span class="checkmark"></span>
+							</label>
+							<label class="container">20 miles
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+							<label class="container">30 miles
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+							<label class="container">50 miles
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+							<label class="container">100 miles
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+							<button id="main-buttonStyle">Search</button>
+					</form>
+			
+					<pre class="w3-padding-large w3-container w3-border w3-padding w3-margin">
+		&lt;form class="filter-box"&gt;
+			&lt;h4&gt;Distance&lt;/h4&gt;
+
+			&lt;label class="container"&gt;10 miles
+				&lt;input type="checkbox" checked="checked"&gt;
+				&lt;span class="checkmark"&gt;&lt;/span&gt;
+			&lt;/label&gt;
+
+			&lt;label class="container"&gt;20 miles
+				&lt;input type="checkbox"&gt;
+				&lt;span class="checkmark"&gt;&lt;/span&gt;
+			&lt;/label&gt;
+
+			&lt;label class="container"&gt;30 miles
+				&lt;input type="checkbox"&gt;
+				&lt;span class="checkmark"&gt;&lt;/span&gt;
+			&lt;/label&gt;
+
+			&lt;label class="container"&gt;50 miles
+				&lt;input type="checkbox"&gt;
+				&lt;span class="checkmark"&gt;&lt;/span&gt;
+			&lt;/label&gt;
+
+			&lt;label class="container"&gt;100 miles
+				&lt;input type="checkbox"&gt;
+				&lt;span class="checkmark"&gt;&lt;/span&gt;
+			&lt;/label&gt;
+
+			&lt;button id="main-buttonStyle"&gt;Search&lt;/button&gt;
+		&lt;/form&gt;
+						</pre>
+				</div>
+				
+
+            </div><br><br><br>
+			
+			 <div class="w3-row">
+                <div class="w3-twothird w3-container" id="resultModels">	
+					<h1>Demenstration of Box Models</h1>
+					<p>This shows the way a search result or feed will look and be encased.
+					It consists of: borders, padding, margins, and the actual content. Items 
+					will be tiled down the page like in the example and oppourtunities for volundeering
+					will have buttons to find out more info or a "want to help" button to volunteer to help, 
+					each opportunity will also have the times needed below their descpriptions.</p>
+
+					<div class="boxModels">
+						<h3>Bring Joy to Hospice Patients</h3>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+						aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur 
+						adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+						magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+						laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+						<p>Fri - Sun (8:00 - 17:00)</p>
+						<button id="main-buttonStyle">Learn More</button>
+						<button id="main-buttonStyle">Want To Help?</button>
+					</div>  
+					
+					<div class="boxModels">
+						<h3>Children Care Center Needs Help!</h3>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+						aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur 
+						adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+						magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+						laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+						<p>Fri - Sun (10:00 - 17:00)</p>
+						<button id="main-buttonStyle">Learn More</button>
+						<button id="main-buttonStyle">Want To Help?</button>
+					</div> 
+
+					<pre class="w3-padding-large w3-container w3-border w3-padding w3-margin">
+
+		&lt;div class="boxModels"&gt;
+
+			&lt;h3&gt;Bring Joy to Hospice Patients&lt;/h3&gt;
+			
+			&lt;p&gt;
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+				ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+				aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur 
+				adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+				magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+				laboris nisi ut aliquip ex ea commodo consequat.
+			&lt;/p&gt;
+			
+			&lt;p&gt;Fri - Sun (8:00 - 17:00)&lt;/p&gt;
+
+			&lt;button&gt;Learn More&lt;/button&gt;
+			&lt;button&gt;Want To Help?&lt;/button&gt;
+
+		&lt;/div&gt;  
+
+
+
+						</pre>
+                </div>
+           
+		
+
+
+ </div>		
+			
+			<footer id="myFooter">
+                <div class="w3-container w3-theme-l2 w3-padding-hor-32">
+                    <h4>Footer</h4>
+                </div>
+
+                <div class="w3-container w3-theme-l1">
+                    <p>Powered by a class Project</p>
+                </div>
+            </footer>
+
+        <script>
+            // Script to open and close the sidenav
+            function w3_open() {
+                document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+                document.getElementsByClassName("w3-overlay")[0].style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+                document.getElementsByClassName("w3-overlay")[0].style.display = "none";
+            }
+        </script>
+
+    </body>
+
+</html>

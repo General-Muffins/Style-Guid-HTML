@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<!--
+
+	Style Guide
+	Project 3 
+	Authors: Yueqing Wang & Sara Hoelzlhammer
+	
+	Work was split evenly between both group members. 
+	Communication took place via email threads and skype meetup. 
+
+-->
+
+<html>
+    <head>
+        <title>Style Guide 101</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+          <!-- Navbar -->
+        <ul class="w3-navbar w3-top w3-left-align" style="z-index:4;"> <!--Primary Color Used-->
+            <li class="w3-opennav w3-right w3-hide-large">
+                <a class="w3-large" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            </li>
+			<div class="navLink">
+				<li><a href="#">People Helping People</a></li> <!-- Hover Color = Secondary: First Accent Color = Border-->
+				<li id="current" class="w3-hide-small"><a href="PeopleHpeople.html">Style guide</a></li>
+				<li class="w3-hide-small"><a href="components.html">UI Components</a></li>
+			</div>
+        </ul>
+
+         <!-- Sidenav -->
+         <nav id="sideBar" class="w3-sidenav w3-collapse w3-animate-left" style="z-index:3;width:250px;margin-top:51px;">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hide-large w3-hover-black" title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <h4 id="sideNavTitle"><b>Table of contents</b></h4> <!--Background color = Primary, Title for Side Bar = Accent-->
+				<div class="navLink">
+					<a href="#purpose">Purpose</a> 
+					<a href="#grid">Grid Layout</a> <!-- Hover Color = Secondary: First Accent Color = Border-->
+					<a href="#colors">Color Palette</a> 
+					<a href="#typography">Typography</a>
+				</div>
+        </nav>
+
+          <!-- Overlay effect when opening sidenav on small screens -->
+          <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"></div>
+
+          <!-- Main content: shift it to the right by 250 pixels when the sidenav is visible -->
+        <div class="w3-main" style="margin-left:250px">
+		
+			<div class="w3-row w3-padding-hor-64">
+                <div id="purpose" class="w3-twothird w3-container" style="margin-top: 50px">
+                    <h1>Purpose</h1> <!--Color = Darkest Green Accent-->
+						<p>
+							The purpose of the Style Guide is to keep track of styles and 
+							components of the People Helping People Website, for how they will 
+							look or feel. The Style Guide targets the desktop Web platform mainly. 
+							The inspirtaion for this style guide is inline with the example given to
+							us in class. 
+						</p>
+                </div>
+            </div>
+			
+			<div class="w3-row">
+                <div class="w3-twothird w3-container" id="grid">
+                    <h1>Grid layout</h1>
+					<p>The grid layout shows the pattern that the site will
+					use. Layout will consist of a navigation bar on top, with main
+					content in middle, portions on the sides blocked off for use of 
+					things such as saved items, or filtering and a footer at the bottom
+					of the page.</p>
+                    <div class="section group">
+                        <div class="col span_10_of_10">
+                            10 of 10 :Main Navigation Bar
+                        </div>
+
+                    </div>
+
+                    <div class="section group">
+					
+					
+                        <div class="col span_2_of_10">
+                            2 of 10 : filter
+                        </div>
+                        <div class="col span_6_of_10">
+                            6 of 10 : Main Content Box
+                        </div>
+                        <div class="col span_2_of_10">
+                            2 of 10 :Saved items
+                        </div>
+                    </div>
+
+                    <div class="section group">
+                        <div class="col span_10_of_10" >
+                            10 of 10 : Footer (bottom Navigation Bar)
+                        </div>
+                </div>
+            </div>
+
+            <div class="w3-row w3-padding-hor-64">
+                <div id="colors" class="w3-twothird w3-container">
+                    <h1>Color palette</h1>   <!--Color = Darkest Green Accent-->
+					<p>The color palette is a gradient of mainly shades of green that
+					will help to identify "People Helping People". All colors given below
+					help to define the brand and be seen as attractive and welcoming to 
+					the consumers or clients working with "People Helping People. Colors
+					should be used in a manner that reflects positive user interactions.
+					Primary and Secondary colors should be used for larger aspects of website such as 
+					backgrounds,navigation and menus. Accent colors should be used to help define smaller items such
+					as buttons, hover outlines, or font color.</p>
+					
+					<p>Color Palette Descriptions for use on web site given with
+					their hexidecimal code are given below. Note that the background
+					of the main portion of the style guide is in white, not pictured button
+					listed as the example will be the style guides background.</p>
+					
+					<p>Primary color(s): #d7fff1, #FFFFFF</p>
+                    <p>Secondary color: #aafcb8</p>
+					<p>Accent/Highlight color(s): #70b77e, #285943, #000000</p>
+                    <p>
+					
+					<img class="w3-round" src="images/palette.png">
+						
+                    </p>
+                </div>
+            </div> 
+
+            <div class="w3-row w3-padding-hor-64">
+                <div class="w3-twothird w3-container" id="typography">
+                    <h1>Typography</h1> <!--Color = Darkest Green Accent-->
+					<p>The typography sets the expectaions for the way text elements
+					will be designed and work. Definitions for body text, headings, 
+					hyperlinks, and other text elements are specified in this section.
+					Elements should be used as described necessary in their sections below.
+					Font family, size and weight. Font family is the same for the entire site 
+					and is given below.<br><br>
+					
+					Font family: Arial, Helvetica, sans-serif;
+					</p>	
+					
+					<h3>Body text and Hyperlinks</h3> <!--Color = Darkest Green Accent-->
+					
+					<p>Hyperlinks are colored in accent/highlight colors, 
+					shown below with style of fontsize, color, and weight.<br>
+					When hovered over a link will change to the lightest accent color.
+					This can be tested below when hovering but a screenshot is included to
+					show this without doing so. All hyperlinks located with in body text
+					should be underlined and styled in this way.</p>
+					
+					<p>Below is an example in an image of what that looks like. As
+					well as links to try out physically.</p>
+					<img id="imgExample" src="images/Hyperlink.jpg">
+					
+					<div class="links">
+						<p><a>UI Components</a></p> <!--Styles can be found through ID tags-->
+						<p><a>Homepage</a></p>
+						<p><a>Forgot Your Password?</a></p>
+					</div>
+					
+					<h3>Heading Style</h3>
+                    <p>Font family is defined at top of stylesheet.<br><br>
+					Font weight for lower than H1 is defaulted, and margins, padding, 
+					or line-height may vary for location of text.<br><br>
+					All H1 elements will be styled with a font weight of bold. H1 is reserved for 
+					titles or headings. Subtitles are reserved to h2. Anything smaller used can be
+					resereved to bulleting or subcategories. Examples of what the sizes look like are
+					given below, heading one is styled how titles or headings will look.</p><br>
+					
+					<p>Titles/Headings:</p>
+					<h1>This is Heading 1</h1><br><!--Styled Via ID in stylesheet-->
+					
+					<p>Subtitles:</p>
+                    <h2>This is Heading 2</h2><br>
+					
+					<p>Bulleting/Subcategories:</p>
+                    <h3>This is Heading 3</h3>
+                    <h4>This is Heading 4</h4>
+                    <h5>This is Heading 5</h5>
+                    <h6>This is Heading 6</h6>
+                </div>
+            </div>
+			
+			<footer id="myFooter">
+                <div class="w3-container w3-theme-l2 w3-padding-hor-32">
+                    <h4>Footer</h4>
+                </div>
+
+                <div class="w3-container w3-theme-l1">
+                    <p>Powered by a class Project</p>
+                </div>
+            </footer>
+            <!-- END MAIN -->
+        </div>
+        
+        <script>
+            // Script to open and close the sidenav
+            function w3_open() {
+                document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+                document.getElementsByClassName("w3-overlay")[0].style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+                document.getElementsByClassName("w3-overlay")[0].style.display = "none";
+            }
+        </script>
+
+    </body>
+
+    </html>
